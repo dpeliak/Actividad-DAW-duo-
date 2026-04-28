@@ -1,0 +1,32 @@
+services:
+  web:
+    image: php:latest
+    build:
+      context: web/
+    container_name: damaweb
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_NAME: tasques
+      DB_USER: root
+      DB_PASS: root
+    depends_on:
+      - db
+
+  db:
+    image: mysql:latest
+    build:
+      context: sql/
+    container_name: damadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tasques
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/base.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db_data:
