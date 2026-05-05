@@ -1,5 +1,7 @@
 # Aplicación de Tarea
 
+<img width="704" height="418" alt="image" src="https://github.com/user-attachments/assets/d21f2d76-94ad-4019-9dfe-aae873834204" />
+
 ## Descripción
 
 Esta aplicación gestiona tareas, permisos y usuarios. En nuestra aplicacion tendran varios valores como si esta en proceso, comenzada o finalizada, cada tarea tiene una fecha y esta asignada a un usuario.
@@ -10,6 +12,10 @@ Para poder ejecutrar esta aplicación primero deberas copiar este repositorio a 
 ```
   $ docker-compose up -d --build
 ```
+
+<img width="1470" height="118" alt="image" src="https://github.com/user-attachments/assets/6f193a06-94ab-4868-9ce4-3b68cf921d95" />
+
+### Scripts Usuarios
 
 Una vez ejecutado este comando podremos observar en nuestra terminal como se construyen los contenedores atraves del docker-compose. Cuando se finalize la instalación abriremos una página web y pondremos esta dirección en la 
 URL: [localhost:9999](url), para poder entrar a la aplicación deberemos de ejecturar un script para crear el primer usuario, pondremos en el navegador la siguiente web: [localhost:9999/admin.php](url)
