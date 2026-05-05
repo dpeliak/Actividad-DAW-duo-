@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Tareas ver</title>
+</head>
+<body>
+<h1>Detalle de la tarea - Maikel</h1>
+
+<p><strong>Texto:</strong> <?= htmlspecialchars($tarea->texto) ?></p>
+<p><strong>Estado:</strong> <?= $tarea->estado ?></p>
+<p><strong>Autor:</strong> <?= $tarea->autor ?? 'Personal' ?></p>
+<p><strong>Tema:</strong> <?= $tarea->tema ?></p>
+<p><strong>Fecha límite:</strong> <?= $tarea->fecha_limite ?></p>
+<p><strong>Prioridad: </strong> <?= $tarea->prioridad ?></p>
+
+<a href="index.php">Volver al listado</a>
+</body>
+</html>
